@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Proxy
 {
-    public class RealATM : IATM
+    public class RealATM : IATM, IMonitorService
     {
 
-        protected int totalCash;
+        protected int totalCash = 1_000_000;
 
         public void Desposit(int amount)
         {
